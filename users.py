@@ -18,7 +18,7 @@ while True:
         flag = 0
     if flag == 0:
         b.open_block()
-        b.input_text()
+        b.input_text(public_key)
         b.sign_block(private_key)
         b.edit_transaction()
         b.previos_hash()
@@ -26,5 +26,7 @@ while True:
         b.edit_nonse()
         b.hash_block()
         b.write()
+    #b.verify_block(public_key, 14)
     b.sbros()
+    
     print("БЛОК СОЗДАН")
